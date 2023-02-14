@@ -25,6 +25,7 @@ module Savon
 
       def notify(operation_name, builder, globals, locals)
         expectation = expectations.shift
+        p expectation
 
         if expectation
           expectation.actual(operation_name, builder, globals, locals)
